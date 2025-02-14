@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Pinkend Light';
+    src: url('fonts/pinkend-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(44, 44, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Pinkend', sans-serif;
+    font-size: 300px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(255, 255, 254);
+    cursor: url('image/raindrop.png'), auto;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
