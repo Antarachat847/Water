@@ -9,6 +9,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    cursor: url('image/image/raindrop.png'), auto; /* Updated path */
 }
 
 /* Full-screen container */
@@ -30,21 +31,19 @@ html, body {
     transition: opacity 0.3s ease;
 }
 
-/* Initially hide the GIF */
+
 .gif-image {
     display: none;
 }
 
-/* Clickable text area covering entire text, responsive */
+
 .click-area {
     position: absolute;
-    top: 8%;  /* Adjusted to cover full text */
-    left: 5%; /* Expanded to cover entire text */
+    top: 8%;  
+    left: 5%; 
     width: 90%; /* Expanded width for full coverage */
     height: 25%; /* Increased height to ensure full text coverage */
     cursor: pointer;
     background: rgba(255, 0, 0, 0); /* Semi-transparent for testing, remove later */
 }
 
-/* Debugging - remove comment to make invisible */
-/* .click-area { background: rgba(255, 0, 0, 0); } */
