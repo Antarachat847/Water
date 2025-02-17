@@ -6,22 +6,21 @@
 }
 
 body {
-    background-color: rgb(255, 254, 246);
+    background-color: rgb(44, 44, 107);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     font-family: 'Pinkend', sans-serif;
-    font-size: 150px;
+    font-size: 200px;
     font-weight: bold;
     text-transform: uppercase;
-    color: rgb(44, 44, 107);
+    color: rgb(255, 255, 254);
     cursor: url('image/raindrop.png'), auto;
 }
 
-/* Optional: Ensure link text matches the page styling */
 a {
-    text-decoration: none; /* Removes underline */
-    color: inherit; /* Keeps the text color the same */
+    text-decoration: none; 
+    color: inherit; 
 }
