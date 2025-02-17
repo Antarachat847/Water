@@ -9,7 +9,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    cursor: url('image/image/raindrop.png'), auto; /* Updated path */
+    cursor: url('image/whitedrop.png'), auto; /* Updated path */
 }
 
 /* Full-screen container */
@@ -39,11 +39,11 @@ html, body {
 
 .click-area {
     position: absolute;
-    top: 8%;  
+    top: 4%;  
     left: 5%; 
     width: 90%; /* Expanded width for full coverage */
     height: 25%; /* Increased height to ensure full text coverage */
     cursor: pointer;
-    background: rgba(255, 0, 0, 0.59); /* Semi-transparent for testing, remove later */
+    background: rgba(255, 0, 0, 0); /* Semi-transparent for testing, remove later */
 }
 
