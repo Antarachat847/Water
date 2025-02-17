@@ -8,10 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <img class="static-image" src="image/image/MacBook Air - 1.png" alt="Static Image">
-        <img class="gif-image" src="image/image/Untitled_Artwork.gif" alt="GIF">
+        <img class="static-image" src="image/image/first image.png" alt="Static Image">
+        <img class="gif-image" src="image/image/Brighter.gif" alt="GIF" style="display: none;">
 
-        <!-- Clickable overlay specifically for the text -->
         <div class="click-area"></div>
     </div>
 
@@ -20,10 +19,17 @@
             const gifImage = document.querySelector('.gif-image');
             const staticImage = document.querySelector('.static-image');
             const clickArea = document.querySelector('.click-area');
+            let gifPlaying = false;
 
             clickArea.addEventListener('click', () => {
-                gifImage.style.display = "block";  // Show GIF
-                staticImage.style.display = "none"; // Hide Static Image
+                if (!gifPlaying) {
+                    gifImage.style.display = "block";  // Show GIF
+                    staticImage.style.display = "none"; // Hide Static Image
+                    gifPlaying = true;
+                } else {
+                    // Redirect to the next page
+                    window.location.href = "https://antarachat847.github.io/Water/2/"; // Change this to your desired page
+                }
             });
         });
     </script>

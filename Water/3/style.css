@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Pinkend Light';
-    src: url('fonts/pinkend-light.ttf') format('truetype');
+    font-family: 'Pinkend';
+    src: url('fonts/Pinkend.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,16 +12,20 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Pinkend', sans-serif;
-    font-size: 300px;
-    font-weight: bold;
+    font-family: 'Pinkend', sans-serif; /* Ensure consistency */
+    font-size: 230px;
+    font-weight: normal; /* Avoid forcing bold */
     text-transform: uppercase;
     color: rgb(44, 44, 107);
-    cursor: url('image/raindrop.png'), auto;
+    cursor: url('image/blueraindrop.png'), auto;
 }
 
-/* Optional: Ensure link text matches the page styling */
-a {
-    text-decoration: none; /* Removes underline */
-    color: inherit; /* Keeps the text color the same */
+.clickable-text {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Make sure the link doesn't change color */
+    display: inline-block; /* Ensure proper layout */
+}
+
+.clickable-text span {
+    pointer-events: none; /* Prevents unwanted styling issues */
 }

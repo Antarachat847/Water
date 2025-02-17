@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click to Play GIF</title>
+    <title>Joins</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <img class="static-image" src="image/Slides down.png" alt="Static Image">
-        <img class="gif-image" src="image/slidegif.gif" alt="GIF">
+        <img class="static-image" src="image/MacBook Air - 9.png" alt="Static Image">
+        <img class="gif-image" src="image/MacBook Air - 10.png" alt="Static Image">
 
         <div class="click-area"></div>
     </div>
@@ -19,10 +19,17 @@
             const gifImage = document.querySelector('.gif-image');
             const staticImage = document.querySelector('.static-image');
             const clickArea = document.querySelector('.click-area');
+            let gifPlaying = false;
 
             clickArea.addEventListener('click', () => {
-                gifImage.style.display = "block";  // Show GIF
-                staticImage.style.display = "none"; // Hide Static Image
+                if (!gifPlaying) {
+                    gifImage.style.display = "block";  // Show GIF
+                    staticImage.style.display = "none"; // Hide Static Image
+                    gifPlaying = true;
+                } else {
+                    // Redirect to the next page
+                    window.location.href = "https://antarachat847.github.io/Water/2/"; // Change this to your desired page
+                }
             });
         });
     </script>
