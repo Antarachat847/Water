@@ -38,4 +38,14 @@ html, body {
     display: none;
 }
 
-/* Clickab
+/* Clickable area for interaction */
+.click-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjusted for better accuracy */
+    height: 30%; /* Ensures the full clickable area is usable */
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0); /* Fully transparent, keep for debugging if needed */
+}

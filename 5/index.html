@@ -19,10 +19,17 @@
             const gifImage = document.querySelector('.gif-image');
             const staticImage = document.querySelector('.static-image');
             const clickArea = document.querySelector('.click-area');
+            let gifPlaying = false;
 
             clickArea.addEventListener('click', () => {
-                gifImage.style.display = "block";  // Show GIF
-                staticImage.style.display = "none"; // Hide Static Image
+                if (!gifPlaying) {
+                    gifImage.style.display = "block";  // Show GIF
+                    staticImage.style.display = "none"; // Hide Static Image
+                    gifPlaying = true;
+                } else {
+                    // Redirect to the next page
+                    window.location.href = "https://antarachat847.github.io/Water/6/"; // Change this to your desired page
+                }
             });
         });
     </script>
