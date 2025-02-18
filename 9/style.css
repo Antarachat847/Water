@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Pinkend';
+    src: url('fonts/Pinkend.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-color: rgb(244, 242, 228);
+    cursor: url('image/blueraindrop.png'), auto; /* Updated path */
+}
+.hover-trigger {
+    padding-left: 50px;
+    margin-top: 27%;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 3em;
+    font-family:'Pinkend';
+    font-weight: normal;
+    color: rgb(18, 18, 108);
+}
+
+/* Initially hide the text */
+.hidden-text {
+    padding-left: 50px;
+    line-height: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 4s ease-in-out, visibility 4s ease-in-out;
+    font-size: 3em;
+    font-family:'Pinkend';
+    color: rgb(18, 18, 108);
+    margin-top: 10px;
+}
+
+/* When hovering over "Pauses", reveal the text */
+.hover-trigger:hover + .hidden-text {
+    opacity: 1;
+    visibility: visible;
+}
