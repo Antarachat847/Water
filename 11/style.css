@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Pinkend';
+    src: url('fonts/Pinkend.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body styling */
+body {
+    background-color: rgb(255, 254, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Pinkend', sans-serif;
+    font-size: 130px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgb(44, 44, 107);
+    text-align: center;
+}
+
+/* Full-screen container */
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Static image and video styling */
+.static-image, .hidden-video {
+    position: absolute;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures full coverage without distortion */
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Initially, the video should be hidden */
+.hidden-video {
+    display: none;
+    z-index: 10;
+}
+
+/* Click area to trigger the video */
+.click-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}

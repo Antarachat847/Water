@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to Play Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img class="static-image" id="staticImage" src="image/wateris.png" alt="Static Image">
+
+        <!-- Hidden Video -->
+        <video class="hidden-video" id="playVideo" muted loop>
+            <source src="image/wateris.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="click-area"></div>
+    </div>
+
+    <script src="vid.js"></script>
+</body>
+</html>
