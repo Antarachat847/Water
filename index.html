@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pause</title>
+    <title>Click to Play GIF</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="hover-trigger">Pauses</h1>
-    <p class="hidden-text">Then carries on,<br>This rain often leaves us drenched.</p>
-    <script src="pause.js"></script>
+    <div class="container">
+        <img class="static-image" src="image/MacBook Air - 17.png" alt="Static Image">
+        <img class="gif-image" src="image/spiral.gif" alt="GIF" style="display: none;">
+
+        <div class="click-area"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const gifImage = document.querySelector('.gif-image');
+            const staticImage = document.querySelector('.static-image');
+            const clickArea = document.querySelector('.click-area');
+            let gifPlaying = false;
+
+            clickArea.addEventListener('click', () => {
+                if (!gifPlaying) {
+                    gifImage.style.display = "block";  // Show GIF
+                    staticImage.style.display = "none"; // Hide Static Image
+                    gifPlaying = true;
+                } else {
+                    // Redirect to the next page
+                    window.location.href = "https://antarachat847.github.io/Water/11/"; // Change this to your desired page
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>
