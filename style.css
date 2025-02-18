@@ -1,46 +1,39 @@
-/* Reset margins and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: 'Pinkend';
+    src: url('fonts/Pinkend.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
-
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    cursor: url('image/image/whitedrop.png'), auto; /* Updated path */
-    background-color: #06104b;
+body{
+    background-color: rgb(244, 242, 228);
+    cursor: url('image/blueraindrop.png'), auto; /* Updated path */
 }
-
-/* Full-screen container */
-.container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Ensure images fit within a smaller area */
-.static-image, .gif-image {
-    position: absolute;
-    width: 90%; /* Reduce size (Adjust as needed) */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 90vh; /* Prevent images from being too tall */
-    object-fit: contain; /* Ensure images fit without being cropped */
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Adjust click area to match the new size */
-.click-area {
-    position: absolute;
-    top: 15%;  /* Adjust position if needed */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%; /* Match reduced image width */
-    height: 20%; /* Adjust as needed */
+.hover-trigger {
+    padding-left: 50px;
+    margin-top: 27%;
     cursor: pointer;
-    background: rgba(255, 0, 0, 0); /* Transparent (for testing, remove later) */
+    display: inline-block;
+    font-size: 3em;
+    font-family:'Pinkend';
+    font-weight: normal;
+    color: rgb(18, 18, 108);
+}
+
+/* Initially hide the text */
+.hidden-text {
+    padding-left: 50px;
+    line-height: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 4s ease-in-out, visibility 4s ease-in-out;
+    font-size: 3em;
+    font-family:'Pinkend';
+    color: rgb(18, 18, 108);
+    margin-top: 10px;
+}
+
+/* When hovering over "Pauses", reveal the text */
+.hover-trigger:hover + .hidden-text {
+    opacity: 1;
+    visibility: visible;
 }
