@@ -37,11 +37,4 @@ html, body {
 /* Adjust click area to match the new size */
 .click-area {
     position: absolute;
-    top: 15%;  /* Adjust position if needed */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%; /* Match reduced image width */
-    height: 20%; /* Adjust as needed */
-    cursor: pointer;
-    background: rgba(255, 0, 0, 0); /* Transparent (for testing, remove later) */
-}
+    top: 15%;  /* Adjust p
