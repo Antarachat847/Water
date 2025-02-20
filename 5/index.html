@@ -4,24 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click to Play GIF</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Make the entire body clickable and remove margin */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            cursor: pointer;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .gif-image {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <img class="static-image" src="image/Slides down.png" alt="Static Image">
         <img class="gif-image" src="image/slidegif.gif" alt="GIF">
-
-        <div class="click-area"></div>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const gifImage = document.querySelector('.gif-image');
             const staticImage = document.querySelector('.static-image');
-            const clickArea = document.querySelector('.click-area');
+            const container = document.querySelector('.container');
             let gifPlaying = false;
 
-            clickArea.addEventListener('click', () => {
+            container.addEventListener('click', () => {
                 if (!gifPlaying) {
                     gifImage.style.display = "block";  // Show GIF
                     staticImage.style.display = "none"; // Hide Static Image
