@@ -37,4 +37,5 @@ html, body {
 /* Adjust click area to match the new size */
 .click-area {
     position: absolute;
-    top: 15%;  /* Adjust p
+    top: 15%; 
+}
